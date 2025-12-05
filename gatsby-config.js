@@ -1,8 +1,7 @@
 module.exports = {
-  pathPrefix: "/wedding-invitation",
   siteMetadata: {
     title: `weddingInvitation`,
-    siteUrl: `https://codingkermit.github.io/wedding-invitation/`
+    siteUrl: `https://wonhee-wedding-invitation.github.io`
   },
   plugins: ["gatsby-plugin-styled-components"]
 };
