@@ -1,4 +1,4 @@
-export const WEDDING_INVITATION_URL = "https://codingkermit.github.io/wedding-invitation/";
+export const WEDDING_INVITATION_URL = "https://wonhee-wedding-invitation.github.io/";
 export const KAKAOTALK_API_TOKEN = "1f3eb139839646ade48bb4cce0503327";
 export const KAKAOTALK_SHARE_IMAGE =
   "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg";
