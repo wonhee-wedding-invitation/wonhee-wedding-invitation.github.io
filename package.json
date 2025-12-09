@@ -1,0 +1,54 @@
+{
+  "name": "wedding-invitation",
+  "version": "0.1.0",
+  "description": "A wedding invitation web page template",
+  "author": "wjw",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://wonhee-wedding-invitation.github.io/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.15",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "dayjs": "^1.11.10",
+    "firebase": "^12.6.0",
+    "i18next": "^25.7.1",
+    "react": "^19.1.0",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^16.4.0",
+    "sass": "^1.89.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.0.4",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-svgr": "^4.5.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/eslint": "^8",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "prettier": "^3.2.5",
+    "typescript-eslint": "^8.35.1"
+  }
+}
