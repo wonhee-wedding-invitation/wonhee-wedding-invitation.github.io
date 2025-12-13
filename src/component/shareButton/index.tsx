@@ -25,20 +25,35 @@ export const ShareButton = () => {
             return
           }
 
-          try {
-            kakao.Share.createDefaultButton({
-              container: "#kakaotalk-sharing-btn",
-              objectType: 'feed',
-              content: {
-                title: `${GROOM_FULLNAME} ❤️ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
-                description:
-                  WEDDING_DATE.format(WEDDING_DATE_FORMAT) + "\n" + LOCATION,
-                imageUrl:
+          kakao.Share.sendDefault({
+            // container: "#kakaotalk-sharing-btn",
+            objectType: 'feed',
+            content: {
+              title: `${GROOM_FULLNAME} ❤️ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
+              description:
+                WEDDING_DATE.format(WEDDING_DATE_FORMAT) + "\n" + LOCATION,
+              imageUrl:
+                window.location.protocol +
+                "//" +
+                window.location.host +
+                baseUrl +
+                "/preview_image.png",
+              link: {
+                mobileWebUrl:
                   window.location.protocol +
                   "//" +
                   window.location.host +
-                  baseUrl +
-                  "/preview_image.png",
+                  baseUrl,
+                webUrl:
+                  window.location.protocol +
+                  "//" +
+                  window.location.host +
+                  baseUrl,
+              },
+            },
+            buttons: [
+              {
+                title: "초대장 보기",
                 link: {
                   mobileWebUrl:
                     window.location.protocol +
@@ -52,27 +67,8 @@ export const ShareButton = () => {
                     baseUrl,
                 },
               },
-              buttons: [
-                {
-                  title: "초대장 보기",
-                  link: {
-                    mobileWebUrl:
-                      window.location.protocol +
-                      "//" +
-                      window.location.host +
-                      baseUrl,
-                    webUrl:
-                      window.location.protocol +
-                      "//" +
-                      window.location.host +
-                      baseUrl,
-                  },
-                },
-              ],
-            })
-          } catch (error) {
-            console.error("kakao share error :", error);
-          }
+            ],
+          })
         }}
       >
         <img src={ktalkIcon} alt="ktalk-icon" /> 카카오톡으로 공유하기
