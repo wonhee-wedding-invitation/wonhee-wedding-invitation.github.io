@@ -250,8 +250,6 @@ const WriteGuestBookModal = ({ loadPosts }: { loadPosts: () => void }) => {
           //   return
           // }
 
-          console.log('test');
-
           await addDoc(collection(db, "guestbook"), {
             name,
             content,
