@@ -36,7 +36,7 @@ export default function Cover() {
       <div className="cover-title-container">
         <div className="names-en-box">
           <span className="names en-sacramento">
-            Ted & Zoe
+            Jiwon & Taehee
           </span>
         </div>
 
