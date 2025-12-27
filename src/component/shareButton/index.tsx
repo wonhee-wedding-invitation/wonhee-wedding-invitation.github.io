@@ -8,16 +8,35 @@ import {
   WEDDING_DATE_FORMAT,
 } from "../../const"
 import ktalkIcon from "../../icons/ktalk-icon.png"
+import { Button } from "../button";
 import { LazyDiv } from "../lazyDiv"
 import { useKakao } from "../store"
+import { useCopyToClipboard } from "@uidotdev/usehooks";
+import styled from "styled-components";
+import { message } from "antd";
+import { LinkOutlined } from "@ant-design/icons";
 
 const baseUrl = import.meta.env.BASE_URL
 
+const LinkShareButton = styled(Button)`
+  color: var(--title-color) !important;
+  font-weight: 400 !important;
+  align-item: center;
+  width: 100%;
+  &:hover {
+    background-color: rgb(217 125 131 / 48%) !important;
+    border-color: rgb(217 125 131 / 48%) !important;
+    color: var(--title-color) !important;
+  }
+  margin-top: 0.5rem;
+`;
+
 export const ShareButton = () => {
   const kakao = useKakao()
+  const [copyToClipboard, copy] = useCopyToClipboard()
   return (
     <LazyDiv className="footer share-button">
-      <button
+      <LinkShareButton
         className="ktalk-share"
         id="kakaotalk-sharing-btn"
         onClick={() => {
@@ -26,7 +45,6 @@ export const ShareButton = () => {
           }
 
           kakao.Share.sendDefault({
-            // container: "#kakaotalk-sharing-btn",
             objectType: 'feed',
             content: {
               title: `${GROOM_FULLNAME} ❤️ ${BRIDE_FULLNAME}의 결혼식에 초대합니다.`,
@@ -72,7 +90,17 @@ export const ShareButton = () => {
         }}
       >
         <img src={ktalkIcon} alt="ktalk-icon" /> 카카오톡으로 공유하기
-      </button>
+      </LinkShareButton>
+      <LinkShareButton 
+        className="ktalk-share"
+        onClick={() => {
+          copy(window.location.href);
+          message.success("청첩장 링크가 복사되었습니다.")
+        }
+      }>
+        <LinkOutlined />
+        &nbsp;링크 복사하기
+      </LinkShareButton>
     </LazyDiv>
   )
 }
