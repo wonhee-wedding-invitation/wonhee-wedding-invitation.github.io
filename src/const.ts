@@ -49,6 +49,16 @@ export const BRIDE_INFO = [
     name: BRIDE_FULLNAME,
     phone: "010-9301-7697",
     account: "카카오뱅크 3333-17-4986978",
+  },{
+    relation: "신부 아버지",
+    name: BRIDE_FATHER,
+    phone: "010-9453-7731",
+    account: "카카오뱅크 3333-09-8672534",
+  },{
+    relation: "신부 어머니",
+    name: BRIDE_MOTHER,
+    phone: "010-2474-7730",
+    account: "신한 110-345-23544",
   },
 ]
 
@@ -63,5 +73,16 @@ export const GROOM_INFO = [
     name: GROOM_FULLNAME,
     phone: "010-2902-3163",
     account: "토스뱅크 1000-8425-5123",
-  },
+  }
+  // ,{
+  //   relation: "신랑 아버지",
+  //   name: BRIDE_FULLNAME,
+  //   phone: "010-9301-7697",
+  //   account: "카카오뱅크 3333-17-4986978",
+  // },{
+  //   relation: "신랑 어머니",
+  //   name: BRIDE_FULLNAME,
+  //   phone: "010-9301-7697",
+  //   account: "카카오뱅크 3333-17-4986978",
+  // },
 ]
