@@ -78,7 +78,7 @@ export const GROOM_INFO = [
     relation: "신랑 아버지",
     name: GROOM_FATHER,
     phone: "010-6332-3163",
-    // account: "카카오뱅크 3333-17-4986978",
+    account: "농협 221054-56-138493",
   },{
     relation: "신랑 어머니",
     name: GROOM_MOTHER,
